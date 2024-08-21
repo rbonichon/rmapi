@@ -12,13 +12,14 @@ import (
 type ShellCtxt struct {
 	node           *model.Node
 	api            api.ApiCtx
-	path           string
+	path           string // remote path
+	local_path     string
 	useHiddenFiles bool
 	UserInfo       api.UserInfo
 }
 
 func (ctx *ShellCtxt) prompt() string {
-	return fmt.Sprintf("[%s]>", ctx.path)
+	return fmt.Sprintf("[%s::%s]>", ctx.local_path, ctx.path)
 }
 
 func setCustomCompleter(shell *ishell.Shell) {
@@ -43,10 +44,12 @@ func useHiddenFiles() bool {
 
 func RunShell(apiCtx api.ApiCtx, userInfo *api.UserInfo, args []string) error {
 	shell := ishell.New()
+	cwd, _ := os.Getwd()
 	ctx := &ShellCtxt{
 		node:           apiCtx.Filetree().Root(),
 		api:            apiCtx,
 		path:           apiCtx.Filetree().Root().Name(),
+		local_path:     cwd,
 		useHiddenFiles: useHiddenFiles(),
 		UserInfo:       *userInfo,
 	}
@@ -54,8 +57,10 @@ func RunShell(apiCtx api.ApiCtx, userInfo *api.UserInfo, args []string) error {
 	shell.SetPrompt(ctx.prompt())
 
 	shell.AddCmd(lsCmd(ctx))
+	shell.AddCmd(llsCmd(ctx))
 	shell.AddCmd(pwdCmd(ctx))
 	shell.AddCmd(cdCmd(ctx))
+	shell.AddCmd(lcdCmd(ctx))
 	shell.AddCmd(getCmd(ctx))
 	shell.AddCmd(mgetCmd(ctx))
 	shell.AddCmd(mkdirCmd(ctx))
