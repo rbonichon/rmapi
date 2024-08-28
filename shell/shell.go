@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/abiosoft/ishell"
-	"github.com/juruen/rmapi/api"
-	"github.com/juruen/rmapi/model"
+	"github.com/rbonichon/rmapi/api"
+	"github.com/rbonichon/rmapi/model"
 )
 
 type ShellCtxt struct {

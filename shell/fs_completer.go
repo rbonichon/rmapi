@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/juruen/rmapi/log"
+	"github.com/rbonichon/rmapi/log"
 )
 
 func prefixToDir(s []string) string {

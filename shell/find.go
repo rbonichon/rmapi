@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/abiosoft/ishell"
-	"github.com/juruen/rmapi/filetree"
-	"github.com/juruen/rmapi/model"
+	"github.com/rbonichon/rmapi/filetree"
+	"github.com/rbonichon/rmapi/model"
 )
 
 func findCmd(ctx *ShellCtxt) *ishell.Cmd {

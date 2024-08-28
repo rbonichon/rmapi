@@ -1,4 +1,4 @@
-module github.com/juruen/rmapi
+module github.com/rbonichon/rmapi
 
 go 1.19
 

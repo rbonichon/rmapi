@@ -44,7 +44,7 @@ support for the new protocol is experimental, and you should make sure you have 
 Install and build the project:
 
 ```
-git clone https://github.com/juruen/rmapi
+git clone https://github.com/rbonichon/rmapi
 cd rmapi
 go install
 ```

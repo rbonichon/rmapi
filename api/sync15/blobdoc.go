@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/juruen/rmapi/archive"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/model"
+	"github.com/rbonichon/rmapi/archive"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/model"
 )
 
 type BlobDoc struct {

@@ -13,9 +13,9 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/model"
-	"github.com/juruen/rmapi/util"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/model"
+	"github.com/rbonichon/rmapi/util"
 )
 
 type NamePath struct {

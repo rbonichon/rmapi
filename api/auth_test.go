@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/juruen/rmapi/transport"
+	"github.com/rbonichon/rmapi/transport"
 )
 
 func TestAuthHttpCtx(t *testing.T) {

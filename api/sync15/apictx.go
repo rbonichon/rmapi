@@ -11,12 +11,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/juruen/rmapi/archive"
-	"github.com/juruen/rmapi/filetree"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/model"
-	"github.com/juruen/rmapi/transport"
-	"github.com/juruen/rmapi/util"
+	"github.com/rbonichon/rmapi/archive"
+	"github.com/rbonichon/rmapi/filetree"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/model"
+	"github.com/rbonichon/rmapi/transport"
+	"github.com/rbonichon/rmapi/util"
 )
 
 // An ApiCtx allows you interact with the remote reMarkable API

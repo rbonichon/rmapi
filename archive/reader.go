@@ -13,9 +13,9 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/juruen/rmapi/encoding/rm"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/util"
+	"github.com/rbonichon/rmapi/encoding/rm"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/util"
 )
 
 // Read fills a Zip parsing a Remarkable archive file.

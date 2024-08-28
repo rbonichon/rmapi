@@ -13,8 +13,8 @@ import (
 	"time"
 
 	uuid "github.com/google/uuid"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/util"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/util"
 	"github.com/nfnt/resize"
 	pdfmodel "github.com/unidoc/unipdf/v3/model"
 	"github.com/unidoc/unipdf/v3/render"

@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/juruen/rmapi/api"
-	"github.com/juruen/rmapi/config"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/shell"
-	"github.com/juruen/rmapi/version"
+	"github.com/rbonichon/rmapi/api"
+	"github.com/rbonichon/rmapi/config"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/shell"
+	"github.com/rbonichon/rmapi/version"
 )
 
 const AUTH_RETRIES = 3

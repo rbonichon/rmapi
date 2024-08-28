@@ -7,10 +7,10 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/juruen/rmapi/config"
-	"github.com/juruen/rmapi/log"
-	"github.com/juruen/rmapi/model"
-	"github.com/juruen/rmapi/transport"
+	"github.com/rbonichon/rmapi/config"
+	"github.com/rbonichon/rmapi/log"
+	"github.com/rbonichon/rmapi/model"
+	"github.com/rbonichon/rmapi/transport"
 )
 
 const (
