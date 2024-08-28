@@ -89,7 +89,7 @@ func createCompleter(ctx *ShellCtxt, check nodeCheckFn) func([]string) []string 
 			}
 
 			var entry string
-			if n.IsDir () {
+			if n.IsDir() {
 				entry = fmt.Sprintf("%s/", n.Name())
 			} else {
 				entry = fmt.Sprintf("%s", n.Name())

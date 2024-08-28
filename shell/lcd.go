@@ -2,7 +2,7 @@ package shell
 
 import (
 	"os"
-	
+
 	"github.com/abiosoft/ishell"
 )
 
@@ -19,10 +19,12 @@ func lcdCmd(ctx *ShellCtxt) *ishell.Cmd {
 			target := c.Args[0]
 
 			current_dir, err := os.Getwd()
-			if err != nil { return }
-			
+			if err != nil {
+				return
+			}
+
 			os.Chdir(target)
-			
+
 			current_dir, _ = os.Getwd()
 			ctx.local_path = current_dir
 
