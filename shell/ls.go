@@ -28,11 +28,7 @@ func lsCmd(ctx *ShellCtxt) *ishell.Cmd {
 			}
 
 			for _, e := range node.Children {
-				eType := "d"
-				if e.IsFile() {
-					eType = "f"
-				}
-				c.Printf("[%s]\t%s\n", eType, e.Name())
+				Display(e, c)
 			}
 		},
 	}
