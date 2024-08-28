@@ -38,7 +38,7 @@ func mvCmd(ctx *ShellCtxt) *ishell.Cmd {
 			}
 
 			// We are moving the node to antoher directory
-			if dstNode != nil && dstNode.IsDirectory() {
+			if dstNode != nil && dstNode.IsDir() {
 				n, err := ctx.api.MoveEntry(srcNode, dstNode, srcNode.Name())
 
 				if err != nil {

@@ -22,7 +22,7 @@ func getCmd(ctx *ShellCtxt) *ishell.Cmd {
 
 			node, err := ctx.api.Filetree().NodeByPath(srcName, ctx.node)
 
-			if err != nil || node.IsDirectory() {
+			if err != nil || node.IsDir() {
 				c.Err(errors.New("file doesn't exist"))
 				return
 			}

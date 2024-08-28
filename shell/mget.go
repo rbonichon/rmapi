@@ -72,7 +72,7 @@ func mgetCmd(ctx *ShellCtxt) *ishell.Cmd {
 
 					os.MkdirAll(dir, 0766)
 
-					if currentNode.IsDirectory() {
+					if currentNode.IsDir() {
 						return filetree.ContinueVisiting
 					}
 

@@ -30,12 +30,12 @@ func (node *Node) IsRoot() bool {
 	return node.Id() == ""
 }
 
-func (node *Node) IsDirectory() bool {
+func (node *Node) IsDir() bool {
 	return node.Document.Type == "CollectionType"
 }
 
 func (node *Node) IsFile() bool {
-	return !node.IsDirectory()
+	return !node.IsDir()
 }
 
 func (node *Node) EntyExists(id string) bool {

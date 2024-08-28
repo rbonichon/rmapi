@@ -43,7 +43,7 @@ func findCmd(ctx *ShellCtxt) *ishell.Cmd {
 			filetree.WalkTree(startNode, filetree.FileTreeVistor{
 				Visit: func(node *model.Node, path []string) bool {
 					var entryType string
-					if node.IsDirectory() {
+					if node.IsDir() {
 						entryType = "[d] "
 					} else {
 						entryType = "[f] "

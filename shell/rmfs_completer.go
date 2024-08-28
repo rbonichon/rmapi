@@ -27,7 +27,7 @@ func prefixToNodeDir(ctx *ShellCtxt, s []string) (*model.Node, string) {
 
 	// Prefix matches an entry
 	if err == nil {
-		if node.IsDirectory() {
+		if node.IsDir() {
 			if strings.HasSuffix(prefix, "/") {
 				return node, prefix
 			} else {
@@ -60,7 +60,7 @@ func prefixToNodeDir(ctx *ShellCtxt, s []string) (*model.Node, string) {
 type nodeCheckFn func(*model.Node) bool
 
 func createDirCompleter(ctx *ShellCtxt) func([]string) []string {
-	return createCompleter(ctx, func(n *model.Node) bool { return n.IsDirectory() })
+	return createCompleter(ctx, func(n *model.Node) bool { return n.IsDir() })
 }
 
 func createFileCompleter(ctx *ShellCtxt) func([]string) []string {
@@ -89,7 +89,7 @@ func createCompleter(ctx *ShellCtxt, check nodeCheckFn) func([]string) []string 
 			}
 
 			var entry string
-			if n.IsDirectory() {
+			if n.IsDir () {
 				entry = fmt.Sprintf("%s/", n.Name())
 			} else {
 				entry = fmt.Sprintf("%s", n.Name())
